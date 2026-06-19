@@ -42,9 +42,16 @@ Kitchener-Waterloo, Canada\\
 \begin{@twocolumnfalse}
 \maketitle
 
-\begin{abstract}
-PathoAlign uses paired-region information to learn scanner-aware biological representations. A practical question is whether a fixed pair-presentation budget is better spent on many unique biological pairs or on repeated exposure to fewer anchor pairs. I evaluate this tradeoff under matched total pair-presentation budgets of 6,400 and 12,800 presentations. Across 40 evaluation cells per allocation, increasing biological pair diversity from 50 to 100 or 200 pairs improved the mean universal biological score and factor-separation score. The strongest seed-blocked effect occurred at budget 6,400 for 200 pairs versus 50 pairs, while 200 versus 100 pairs showed a small plateau effect. Doubling the total budget from 6,400 to 12,800 produced positive effects across all allocations. These results support a bounded resource-allocation claim: under matched total budget, PathoAlign benefits more from biological pair diversity than from repeated anchors alone, with diminishing returns beyond 100 pairs.
-\end{abstract}
+\begin{center}
+{\bfseries Abstract}
+\end{center}
+{\small
+\RaggedRight
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.15em}
+\noindent PathoAlign uses paired-region information to learn scanner-aware biological representations. A practical question is whether a fixed pair-presentation budget is better spent on many unique biological pairs or on repeated exposure to fewer anchor pairs. I evaluate this tradeoff under matched total pair-presentation budgets of 6,400 and 12,800 presentations. Across 40 evaluation cells per allocation, increasing biological pair diversity from 50 to 100 or 200 pairs improved the mean universal biological score and factor-separation score. The strongest seed-blocked effect occurred at budget 6,400 for 200 pairs versus 50 pairs, while 200 versus 100 pairs showed a small plateau effect. Doubling the total budget from 6,400 to 12,800 produced positive effects across all allocations. These results support a bounded resource-allocation claim: under matched total budget, PathoAlign benefits more from biological pair diversity than from repeated anchors alone, with diminishing returns beyond 100 pairs.
+\par
+}
 
 \vspace{0.15in}
 \end{@twocolumnfalse}
@@ -63,6 +70,8 @@ This study isolates that allocation question. The total pair-presentation budget
 I evaluate two total pair-presentation budgets: 6,400 and 12,800. Within each budget, the allocation grid uses 50, 100, and 200 unique biological pairs. Requested anchor repetitions are set so that total pair presentations remain matched within each budget.
 
 \begin{center}
+\begin{minipage}{0.98\linewidth}
+\centering
 \captionof{table}{Matched-budget allocation means.}
 \label{tab:allocation-means}
 \footnotesize
@@ -79,6 +88,7 @@ Budget & Pairs & Reps & Bio score & Factor sep. \\
 12800 & 200 & 64 & 0.461950 & 0.798729 \\
 \bottomrule
 \end{tabular}}
+\end{minipage}
 \end{center}
 
 \section{Allocation Contrasts}
@@ -86,6 +96,8 @@ Budget & Pairs & Reps & Bio score & Factor sep. \\
 Seed-blocked contrasts compare allocation choices within the same total pair-presentation budget. The clearest result is that 200 pairs outperform 50 pairs at budget 6,400, with a positive bootstrap interval and all seed blocks favorable. The 200-minus-100 contrasts are much smaller, indicating a plateau rather than a strong additional gain beyond 100 pairs.
 
 \begin{center}
+\begin{minipage}{0.98\linewidth}
+\centering
 \captionof{table}{Seed-blocked allocation contrasts.}
 \label{tab:allocation-contrasts}
 \footnotesize
@@ -102,6 +114,7 @@ Budget & Contrast & Mean diff. & CI low & CI high & $p$ \\
 12800 & 200--100 & +0.002422 & -0.006368 & +0.011081 & 0.607422 \\
 \bottomrule
 \end{tabular}}
+\end{minipage}
 \end{center}
 
 \section{Budget Doubling}
@@ -109,6 +122,8 @@ Budget & Contrast & Mean diff. & CI low & CI high & $p$ \\
 The second question asks whether increasing the total pair-presentation budget improves the biological score. Doubling from 6,400 to 12,800 was positive for every allocation and for the overall matched comparison.
 
 \begin{center}
+\begin{minipage}{0.98\linewidth}
+\centering
 \captionof{table}{Budget-doubling effects: 12,800 minus 6,400.}
 \label{tab:doubling}
 \footnotesize
@@ -123,6 +138,7 @@ By allocation & 200 & +0.036034 & +0.026404 & 0.001953 \\
 Overall & All & +0.037357 & +0.030315 & 0.001953 \\
 \bottomrule
 \end{tabular}}
+\end{minipage}
 \end{center}
 
 \section{Interpretation}
